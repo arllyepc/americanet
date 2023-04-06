@@ -1,0 +1,297 @@
+.btn-whiteorange-wicon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 48px;
+  gap: 8px;
+
+  /* Branco */
+
+  background: $branco;
+  border-radius: 64px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  transition: all 0.3s ease-in;
+  max-width: 30rem;
+
+  svg {
+    g {
+      path {
+        transition: fill 0.3s ease-in;
+      }
+    }
+  }
+
+  &:hover {
+    color: $branco;
+    background-color: $laranja;
+
+    svg {
+      g {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}
+
+.btn-orangewhite-noicon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 48px;
+  gap: 8px;
+  max-width: 30rem;
+
+  /* Branco */
+  color: $branco;
+  background: $laranja;
+
+  border-radius: 64px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    color: $azul;
+    background-color: $branco;
+  }
+}
+
+.card-plan {
+  max-width: 44rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 96px;
+  gap: 20px;
+
+  background: $branco;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  transition: all ease-in 0.3s;
+
+  &:hover {
+    background: $azul;
+    color: $branco;
+
+    .card-plan__info-link {
+      color: $branco;
+    }
+
+    .card-plan__btn {
+      background-color: $laranja;
+    }
+
+    p {
+      &:first-of-type {
+        color: #fff;
+      }
+      &:last-of-type {
+        color: #fff;
+      }
+    }
+
+    .card-plan__price {
+      color: #fff;
+      p {
+        &:nth-of-type(1) {
+          color: #fff;
+        }
+        &:nth-of-type(2) {
+          color: #fff;
+        }
+
+        &:nth-of-type(3) {
+          color: #fff;
+        }
+      }
+    }
+
+    h3 {
+      color: $branco;
+    }
+
+    span {
+      color: $branco;
+    }
+  }
+
+  p {
+    &:first-of-type {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      color: #000000;
+    }
+
+    &:last-of-type {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  h3 {
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 52px;
+
+    color: #000000;
+  }
+
+  .plan-velocity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+
+    p {
+      &:first-of-type {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 67.7112px;
+        line-height: 100%;
+      }
+
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 39.9741px;
+      line-height: 100%;
+    }
+  }
+
+  .card-plan__price {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    p {
+      &:nth-of-type(1) {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        color: #000;
+      }
+      &:nth-of-type(2) {
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 100%;
+        display: flex;
+        align-items: center;
+        align-self: center;
+
+        color: #000;
+      }
+
+      &:nth-of-type(3) {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        align-self: flex-end;
+
+        color: #000;
+      }
+    }
+  }
+
+  .price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 28.4467px;
+    }
+  }
+
+  .card-plan__btn {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    padding: 9px 48px;
+    gap: 8px;
+
+    width: 195px;
+
+    /* Laranja */
+
+    background: $azul;
+    border-radius: 64px;
+
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+
+    /* Branco */
+
+    color: #ffffff;
+  }
+
+  .card-plan__info-link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: $azul;
+    text-decoration-line: underline;
+  }
+}
+
+.card-diffs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 22px 26px;
+  gap: 24px;
+  max-width: 42.7rem;
+  background-color: #ffffff;
+
+  .card-diffs__icon {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
