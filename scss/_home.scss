@@ -429,3 +429,51 @@ footer {
 		}
 	}
 }
+
+:root {
+	--swiper-navigation-color: #fff;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	height: 4rem !important;
+	width: 4rem !important;
+	background: $azul !important;
+	border-radius: 4px;
+}
+
+/* .swiper-button-next {
+	position: absolute;
+
+	bottom: 0 !important;
+} */
+
+.swiper-custom-nav {
+	margin-top: 24px;
+	width: 12rem;
+	height: 3.2rem;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	left: 50%;
+	margin-left: -6rem;
+
+	@include respond-to(large) {
+		display: none;
+	}
+
+	@include respond-to(xlarge) {
+		display: none;
+	}
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+	text-transform: none !important;
+	letter-spacing: 0;
+	font-size: 1.6rem !important;
+}
+
+.swiper {
+	position: relative;
+}

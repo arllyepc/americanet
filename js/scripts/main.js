@@ -10,6 +10,14 @@ var slide_plans = new Swiper('.slide-plans', {
 	// Default parameters
 	slidesPerView: 3,
 	spaceBetween: 10,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
 	// Responsive breakpoints
 	breakpoints: {
 		// when window width is >= 320px

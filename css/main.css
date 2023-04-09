@@ -1040,3 +1040,58 @@ footer .container-xl .copy {
     flex-direction: column;
   }
 }
+:root {
+  --swiper-navigation-color: #fff;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  height: 4rem !important;
+  width: 4rem !important;
+  background: #173daa !important;
+  border-radius: 4px;
+}
+
+/* .swiper-button-next {
+	position: absolute;
+
+	bottom: 0 !important;
+} */
+.swiper-custom-nav {
+  margin-top: 24px;
+  width: 12rem;
+  height: 3.2rem;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  left: 50%;
+  margin-left: -6rem;
+}
+@media (min-width: 960px) and (max-width: 1279px) {
+  .swiper-custom-nav {
+    display: none;
+  }
+}
+@media (min-width: 1280px) {
+  .swiper-custom-nav {
+    display: none;
+  }
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-size: 1.6rem !important;
+}
+
+.swiper {
+  position: relative;
+}
