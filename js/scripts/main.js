@@ -18,6 +18,8 @@ var slide_plans = new Swiper('.slide-plans', {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
+
+	grabCursor: true,
 	// Responsive breakpoints
 	breakpoints: {
 		// when window width is >= 320px
