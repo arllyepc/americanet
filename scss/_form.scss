@@ -1,4 +1,10 @@
 .s-form {
+	.step-line {
+		width: 100%;
+		height: 1px;
+		background-color: #ccc;
+		margin: 0 8px;
+	}
 	margin-top: 20.7rem;
 	margin-bottom: 6rem;
 	.input-error {
@@ -225,7 +231,38 @@
 			.step-indicators {
 				display: flex;
 				justify-content: space-between;
+				position: relative;
 				margin-bottom: 20px;
+			}
+
+			.step-indicators::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				right: 0;
+				height: 4px;
+				background-color: #ccc;
+				z-index: -1;
+			}
+
+			.step:not(:first-child) {
+				position: relative;
+			}
+
+			.step:not(:first-child)::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: -50%;
+				width: 50%;
+				height: 4px;
+				background-color: #ccc;
+				z-index: 1;
+			}
+
+			.step.active::before {
+				background-color: transparent;
 			}
 
 			.step {

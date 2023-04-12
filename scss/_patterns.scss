@@ -70,9 +70,9 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 32px 96px;
+	padding: 32px 40px;
 	gap: 20px;
-
+	min-height: 70rem;
 	background: $branco;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 	border-radius: 8px;
@@ -171,9 +171,13 @@
 
 	.plan-velocity {
 		display: flex;
-		flex-direction: column;
+
 		align-items: center;
 		gap: 0.4rem;
+		.plan-velocity__img {
+			width: 4rem;
+			height: 4rem;
+		}
 
 		@include respond-to(small) {
 			flex-direction: row;
@@ -218,6 +222,73 @@
 			font-style: normal;
 			font-weight: 600;
 			font-size: 39.9741px;
+			line-height: 100%;
+
+			@include respond-to(small) {
+				font-size: 24px;
+				line-height: 100%;
+			}
+
+			@include respond-to(medium) {
+				font-size: 24px;
+				line-height: 100%;
+			}
+		}
+	}
+
+	.plan-chip {
+		display: flex;
+
+		align-items: center;
+		gap: 0.4rem;
+		.plan-chip__img {
+			width: 4rem;
+			height: 4rem;
+		}
+
+		@include respond-to(small) {
+			flex-direction: row;
+		}
+		@include respond-to(medium) {
+			flex-direction: row;
+		}
+
+		@include respond-to(small) {
+			img {
+				width: 4rem;
+				height: 4rem;
+			}
+		}
+
+		@include respond-to(medium) {
+			img {
+				width: 4rem;
+				height: 4rem;
+			}
+		}
+
+		p {
+			&:first-of-type {
+				font-family: 'Poppins';
+				font-style: normal;
+				font-weight: 700;
+				font-size: 67.7112px;
+				line-height: 100%;
+				@include respond-to(small) {
+					font-size: 48px;
+					line-height: 100%;
+				}
+
+				@include respond-to(medium) {
+					font-size: 48px;
+					line-height: 100%;
+				}
+			}
+
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 600;
+			font-size: 24.9741px;
 			line-height: 100%;
 
 			@include respond-to(small) {
