@@ -1573,7 +1573,6 @@ footer .container-xl .copy {
 .s-form .container-xl .stepper-container {
   margin-top: 4rem;
   width: 100%;
-  height: 100vh;
 }
 .s-form .container-xl .stepper-container .step-indicators {
   display: -webkit-box;
@@ -1644,6 +1643,7 @@ footer .container-xl .copy {
   line-height: 36px;
 }
 .s-form .container-xl .stepper-container .step-form .step-form__grid {
+  text-align: left;
   margin-bottom: 3.4rem;
   margin-top: 3.2rem;
   display: grid;
@@ -1718,6 +1718,8 @@ footer .container-xl .copy {
   margin-top: 10px;
   border-radius: 6px;
   font-size: 16px;
+}
+.s-form .container-xl .stepper-container button:not(:last-child) {
   margin-right: 6.4rem;
 }
 .s-form .container-xl .stepper-container button:hover {
