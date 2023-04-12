@@ -3,14 +3,22 @@
 
 	.slide-principal {
 		width: 100%;
-		height: 100vh;
+		height: 80vh;
+
+		@include respond-to(small) {
+			height: 100vh;
+		}
+
+		@include respond-to(medium) {
+			height: 100vh;
+		}
 
 		.swiper-wrapper {
 			.swiper-slide {
 				padding-top: 20.7rem;
 				background-size: cover !important;
 				&.slide-01 {
-					background: url(../img/slide-01.png) no-repeat center center;
+					background: url(../img/slide-01.png) no-repeat center 9.6rem;
 					@include respond-to(small) {
 						background: url(../img/slide-01-mobile.png) no-repeat center center;
 					}
@@ -20,7 +28,8 @@
 				}
 
 				&.slide-02 {
-					background: url(../img/slide-02.png) no-repeat center center;
+					background: url(../img/slide-02.png) no-repeat center 9.6rem;
+					object-position: top center;
 					@include respond-to(small) {
 						background: url(../img/slide-02-mobile.png) no-repeat center center;
 					}
@@ -178,12 +187,42 @@
 		text-align: center;
 		margin-bottom: 4rem;
 	}
+
+	.s-plans__mobile {
+		display: none;
+		width: 100%;
+		@include respond-to(small) {
+			display: flex;
+			flex-direction: column;
+
+			justify-content: center;
+			gap: 2rem;
+		}
+		@include respond-to(medium) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 2rem;
+		}
+	}
+
+	.s-plans__desktop {
+		display: block;
+		@include respond-to(small) {
+			display: none;
+		}
+		@include respond-to(medium) {
+			display: none;
+		}
+	}
 }
 
 .s-diffs {
 	background-color: $cinza-neutro;
 	padding-top: 4rem;
 	padding-bottom: 4rem;
+	padding-left: 0.8rem;
+	padding-right: 0.8rem;
 	@include respond-to(small) {
 		justify-content: center;
 	}

@@ -78,6 +78,14 @@
 	border-radius: 8px;
 	transition: all ease-in 0.3s;
 
+	@include respond-to(small) {
+		padding: 3.2rem 3.2rem;
+	}
+
+	@include respond-to(medium) {
+		padding: 3.2rem 3.2rem;
+	}
+
 	&:hover {
 		background: $azul;
 		color: $branco;
@@ -149,6 +157,16 @@
 		line-height: 52px;
 
 		color: #000000;
+
+		/* @include respond-to(small) {
+			font-size: 24px;
+			line-height: 100%;
+		}
+
+		@include respond-to(medium) {
+			font-size: 24px;
+			line-height: 100%;
+		} */
 	}
 
 	.plan-velocity {
@@ -157,6 +175,27 @@
 		align-items: center;
 		gap: 0.4rem;
 
+		@include respond-to(small) {
+			flex-direction: row;
+		}
+		@include respond-to(medium) {
+			flex-direction: row;
+		}
+
+		@include respond-to(small) {
+			img {
+				width: 4rem;
+				height: 4rem;
+			}
+		}
+
+		@include respond-to(medium) {
+			img {
+				width: 4rem;
+				height: 4rem;
+			}
+		}
+
 		p {
 			&:first-of-type {
 				font-family: 'Poppins';
@@ -164,6 +203,15 @@
 				font-weight: 700;
 				font-size: 67.7112px;
 				line-height: 100%;
+				@include respond-to(small) {
+					font-size: 48px;
+					line-height: 100%;
+				}
+
+				@include respond-to(medium) {
+					font-size: 48px;
+					line-height: 100%;
+				}
 			}
 
 			font-family: 'Poppins';
@@ -171,6 +219,16 @@
 			font-weight: 600;
 			font-size: 39.9741px;
 			line-height: 100%;
+
+			@include respond-to(small) {
+				font-size: 24px;
+				line-height: 100%;
+			}
+
+			@include respond-to(medium) {
+				font-size: 24px;
+				line-height: 100%;
+			}
 		}
 	}
 

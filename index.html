@@ -22,7 +22,7 @@
 		<header>
 			<div class="container-xl">
 				<div class="logo">
-					<a href="">
+					<a href="#">
 						<img src="img/logo.svg" alt="Logo da Americanet" />
 					</a>
 				</div>
@@ -113,7 +113,7 @@
 		</section>
 
 		<section class="s-plans">
-			<div class="container-xl">
+			<div class="container-xl s-plans__desktop">
 				<div class="container-sm">
 					<h2>Escolha o melhor plano para você</h2>
 					<p class="s-plans__subtitle">
@@ -125,7 +125,7 @@
 
 				<div class="swiper slide-plans">
 					<div class="swiper-wrapper">
-						<div class="card-plan swiper-slide">
+						<div class="card-plan swiper-slide" data-plan="fibra-300">
 							<h3>Fibra 300</h3>
 							<div class="plan-velocity">
 								<div>
@@ -136,6 +136,36 @@
 									/>
 								</div>
 								<p>300</p>
+								<p>Mega</p>
+							</div>
+
+							<p>Internet Fibra</p>
+
+							<div class="card-plan__price">
+								<p>Por</p>
+								<p>R$ 99,90</p>
+								<p>mês</p>
+							</div>
+
+							<p>Instalação grátis</p>
+
+							<a href="#" class="card-plan__btn">Contratar</a>
+
+							<button id="open-modal" class="card-plan__info-link">
+								Informações
+							</button>
+						</div>
+						<div class="card-plan swiper-slide" data-plan="fibra-600">
+							<h3>Fibra 600</h3>
+							<div class="plan-velocity">
+								<div>
+									<img
+										src="img/Icon-wifi.svg"
+										alt="Ícone de WiFi, laranja e azul"
+										class="icon"
+									/>
+								</div>
+								<p>600</p>
 								<p>Mega</p>
 							</div>
 
@@ -155,8 +185,8 @@
 								Informações
 							</button>
 						</div>
-						<div class="card-plan swiper-slide">
-							<h3>Fibra 300</h3>
+						<div class="card-plan swiper-slide" data-plan="combo-300">
+							<h3>Combo 300</h3>
 							<div class="plan-velocity">
 								<div>
 									<img
@@ -169,41 +199,11 @@
 								<p>Mega</p>
 							</div>
 
-							<p>Internet Fibra</p>
+							<p>Internet Fibra + chip</p>
 
 							<div class="card-plan__price">
 								<p>Por</p>
-								<p>R$ 109,90</p>
-								<p>mês</p>
-							</div>
-
-							<p>Instalação grátis</p>
-
-							<a href="#" class="card-plan__btn">Contratar</a>
-
-							<button id="open-modal" class="card-plan__info-link">
-								Informações
-							</button>
-						</div>
-						<div class="card-plan swiper-slide">
-							<h3>Fibra 300</h3>
-							<div class="plan-velocity">
-								<div>
-									<img
-										src="img/Icon-wifi.svg"
-										alt="Ícone de WiFi, laranja e azul"
-										class="icon"
-									/>
-								</div>
-								<p>300</p>
-								<p>Mega</p>
-							</div>
-
-							<p>Internet Fibra</p>
-
-							<div class="card-plan__price">
-								<p>Por</p>
-								<p>R$ 109,90</p>
+								<p>R$ 139,90</p>
 								<p>mês</p>
 							</div>
 
@@ -220,6 +220,99 @@
 						<div class="swiper-button-prev"></div>
 						<div class="swiper-button-next"></div>
 					</div>
+				</div>
+			</div>
+			<!-- SEÇÃO DE PLANOS PARA MOBILE (WIDTH < 768PX) -->
+			<div class="container-xl s-plans__mobile">
+				<div class="card-plan" data-plan="fibra-300">
+					<h3>Combo 300</h3>
+					<div class="plan-velocity">
+						<div>
+							<img
+								src="img/Icon-wifi.svg"
+								alt="Ícone de WiFi, laranja e azul"
+								class="icon"
+							/>
+						</div>
+						<p>300</p>
+						<p>Mega</p>
+					</div>
+
+					<p>Internet Fibra</p>
+
+					<div class="card-plan__price">
+						<p>Por</p>
+						<p>R$ 99,90</p>
+						<p>mês</p>
+					</div>
+
+					<p>Instalação grátis</p>
+
+					<a href="#" class="card-plan__btn">Contratar</a>
+
+					<button id="open-modal" class="card-plan__info-link">
+						Informações
+					</button>
+				</div>
+				<div class="card-plan" data-plan="fibra-600">
+					<h3>Fibra 600</h3>
+					<div class="plan-velocity">
+						<div>
+							<img
+								src="img/Icon-wifi.svg"
+								alt="Ícone de WiFi, laranja e azul"
+								class="icon"
+							/>
+						</div>
+						<p>600</p>
+						<p>Mega</p>
+					</div>
+
+					<p>Internet Fibra</p>
+
+					<div class="card-plan__price">
+						<p>Por</p>
+						<p>R$ 109,90</p>
+						<p>mês</p>
+					</div>
+
+					<p>Instalação grátis</p>
+
+					<a href="#" class="card-plan__btn">Contratar</a>
+
+					<button id="open-modal" class="card-plan__info-link">
+						Informações
+					</button>
+				</div>
+				<div class="card-plan" data-plan="combo-300">
+					<h3>Combo 300</h3>
+					<div class="plan-velocity">
+						<div>
+							<img
+								src="img/Icon-wifi.svg"
+								alt="Ícone de WiFi, laranja e azul"
+								class="icon"
+							/>
+						</div>
+						<p>300</p>
+						<p>Mega</p>
+					</div>
+
+					<p>Internet Fibra + chip</p>
+
+					<div class="card-plan__price">
+						<p>Por</p>
+						<p>R$ 139,90</p>
+						<p>mês</p>
+					</div>
+
+					<p>Instalação grátis</p>
+
+					<a href="#" class="card-plan__btn">Contratar</a>
+
+					<button id="open-modal" class="card-plan__info-link">
+						Informações
+					</button>
 				</div>
 			</div>
 		</section>
