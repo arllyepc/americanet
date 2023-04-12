@@ -1634,14 +1634,17 @@ footer .container-xl .copy {
   color: white;
 }
 .s-form .container-xl .stepper-container .step-form {
+  text-align: center;
   display: none;
 }
 .s-form .container-xl .stepper-container .step-form h3 {
+  text-align: left;
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
 }
 .s-form .container-xl .stepper-container .step-form .step-form__grid {
+  margin-bottom: 3.4rem;
   margin-top: 3.2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
