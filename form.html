@@ -19,7 +19,7 @@
 	</head>
 
 	<body>
-		<header>
+		<header class="form">
 			<div class="container-xl">
 				<div class="logo">
 					<a href="">
@@ -91,30 +91,33 @@
 							<!-- dados pessoais -->
 							<div class="step-form__grid">
 								<div class="form-group">
-									<label for="name">Nome</label>
+									<label for="name">Nome*</label>
 									<input
 										type="text"
 										name="name"
 										id="name"
 										placeholder="Seu nome completo"
+										data-required="true"
 									/>
 								</div>
 								<div class="form-group">
-									<label for="email">E-mail</label>
+									<label for="email">E-mail*</label>
 									<input
 										type="email"
 										name="email"
 										id="email"
 										placeholder="Seu melhor e-mail"
+										data-required="true"
 									/>
 								</div>
 								<div class="form-group">
-									<label for="phone">Telefone principal</label>
+									<label for="phone">Telefone principal*</label>
 									<input
 										type="tel"
 										name="phone"
 										id="phone"
 										placeholder="Seu melhor telefone"
+										data-required="true"
 									/>
 								</div>
 								<div class="form-group">
@@ -127,22 +130,34 @@
 									/>
 								</div>
 								<div class="form-group">
-									<label for="cpf">CPF</label>
+									<label for="cpf">CPF*</label>
 									<input
 										type="text"
 										name="cpf"
 										id="cpf"
 										placeholder="Seu CPF"
+										data-required="true"
 									/>
 								</div>
 								<div class="form-group">
-									<label for="rg" placeholder="">Seu RG</label>
-									<input type="text" name="rg" id="rg" placeholder="Seu RG" />
+									<label for="rg" placeholder="">Seu RG*</label>
+									<input
+										type="text"
+										name="rg"
+										id="rg"
+										placeholder="Seu RG"
+										data-required="true"
+									/>
 								</div>
 
 								<div class="form-group">
-									<label for="birth">Data de nascimento</label>
-									<input type="date" name="birth" id="birth" />
+									<label for="birth">Data de nascimento*</label>
+									<input
+										type="date"
+										name="birth"
+										id="birth"
+										data-required="true"
+									/>
 								</div>
 							</div>
 
@@ -153,12 +168,13 @@
 							<!-- campos do formulário de endereço aqui -->
 							<div class="step-form__grid">
 								<div class="form-group">
-									<label for="street">Rua</label>
+									<label for="street">Rua*</label>
 									<input
 										type="text"
 										name="street"
 										id="street"
 										placeholder="Nome da rua"
+										data-required="true"
 									/>
 								</div>
 								<div class="form-group">
@@ -177,29 +193,32 @@
 										name="complement"
 										id="complement"
 										placeholder="Complemento (opcional)"
+										data-required="true"
 									/>
 								</div>
 								<div class="form-group">
-									<label for="neighborhood">Bairro</label>
+									<label for="neighborhood">Bairro*</label>
 									<input
 										type="text"
 										name="neighborhood"
 										id="neighborhood"
 										placeholder="Nome do bairro"
+										data-required="true"
 									/>
 								</div>
 								<div class="form-group">
-									<label for="city">Cidade</label>
+									<label for="city">Cidade*</label>
 									<input
 										type="text"
 										name="city"
 										id="city"
 										placeholder="Nome da cidade"
+										data-required="true"
 									/>
 								</div>
 								<div class="form-group">
-									<label for="state">Estado</label>
-									<select name="state" id="state">
+									<label for="state">Estado*</label>
+									<select name="state" id="state" data-required="true">
 										<option value="" disabled selected>
 											Selecione o estado
 										</option>
@@ -233,12 +252,13 @@
 									</select>
 								</div>
 								<div class="form-group">
-									<label for="zipcode">CEP</label>
+									<label for="zipcode">CEP*</label>
 									<input
 										type="text"
 										name="zipcode"
 										id="zipcode"
 										placeholder="CEP"
+										data-required="true"
 									/>
 								</div>
 								<div class="form-group">
@@ -260,7 +280,11 @@
 							<div class="step-form__grid">
 								<div class="form-group">
 									<label for="payment-method">Forma de pagamento</label>
-									<select name="payment-method" id="payment-method">
+									<select
+										name="payment-method"
+										id="payment-method"
+										data-required="true"
+									>
 										<option value="">Selecione uma opção</option>
 										<option value="debit">Débito</option>
 										<option value="boleto">Boleto</option>
@@ -269,7 +293,7 @@
 
 								<div class="form-group">
 									<label for="due-date">Dia de vencimento</label>
-									<select name="due-date" id="due-date">
+									<select name="due-date" id="due-date" data-required="true">
 										<option value="">Selecione uma opção</option>
 										<option value="02">02</option>
 										<option value="07">07</option>

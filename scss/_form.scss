@@ -1,5 +1,10 @@
 .s-form {
 	margin-top: 20.7rem;
+	margin-bottom: 6rem;
+	.input-error {
+		border: 1px solid red !important;
+	}
+
 	.container-xl {
 		.card-plan-form {
 			display: flex;
@@ -16,10 +21,12 @@
 
 			@include respond-to(small) {
 				padding: 3.2rem 3.2rem;
+				flex-direction: column;
 			}
 
 			@include respond-to(medium) {
 				padding: 3.2rem 3.2rem;
+				flex-direction: column;
 			}
 
 			p {
@@ -57,15 +64,15 @@
 				color: #000000;
 				filter: brightness(0.9);
 
-				/* @include respond-to(small) {
-                    font-size: 24px;
-                    line-height: 100%;
-                }
-        
-                @include respond-to(medium) {
-                    font-size: 24px;
-                    line-height: 100%;
-                } */
+				@include respond-to(small) {
+					font-size: 24px;
+					line-height: 100%;
+				}
+
+				@include respond-to(medium) {
+					font-size: 24px;
+					line-height: 100%;
+				}
 			}
 
 			.plan-velocity {
@@ -79,10 +86,10 @@
 				}
 
 				@include respond-to(small) {
-					flex-direction: row;
+					flex-direction: column;
 				}
 				@include respond-to(medium) {
-					flex-direction: row;
+					flex-direction: column;
 				}
 
 				@include respond-to(small) {
@@ -253,6 +260,21 @@
 					grid-template-columns: repeat(3, 1fr);
 
 					grid-gap: 20px 32px;
+
+					@include respond-to(small) {
+						margin-top: 3.2rem;
+						display: grid;
+						grid-template-columns: 1fr;
+
+						grid-gap: 20px;
+					}
+					@include respond-to(medium) {
+						margin-top: 3.2rem;
+						display: grid;
+						grid-template-columns: 1fr;
+
+						grid-gap: 20px;
+					}
 					.form-group {
 						label {
 							font-weight: 600;

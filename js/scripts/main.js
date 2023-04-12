@@ -81,7 +81,7 @@ function init() {
 }
 
 function handleCardPlanClicks() {
-	const cards = document.querySelectorAll('.card-plan');
+	const cards = document.querySelectorAll('.card-plan__btn');
 
 	cards.forEach((card) => {
 		card.addEventListener('click', function (event) {
@@ -122,7 +122,9 @@ function handleFormNavigation() {
 	nextButtons.forEach((button) => {
 		button.addEventListener('click', () => {
 			const currentStep = getCurrentStep(button);
-			changeStep(currentStep + 1);
+			if (validateRequiredInputs(currentStep)) {
+				changeStep(currentStep + 1);
+			}
 		});
 	});
 
@@ -134,6 +136,29 @@ function handleFormNavigation() {
 	});
 }
 
+function validateRequiredInputs(stepNumber) {
+	const stepForm = document.querySelector(`#form-${stepNumber}`);
+	const requiredInputs = stepForm.querySelectorAll('[data-required="true"]');
+	let allInputsValid = true;
+
+	requiredInputs.forEach((input) => {
+		if (input.value.trim() === '') {
+			input.classList.add('input-error');
+			allInputsValid = false;
+		} else {
+			input.classList.remove('input-error');
+		}
+
+		// Adiciona um evento 'input' para remover a classe 'input-error' quando o usuário começa a digitar
+		input.addEventListener('input', () => {
+			if (input.classList.contains('input-error')) {
+				input.classList.remove('input-error');
+			}
+		});
+	});
+
+	return allInputsValid;
+}
 function getCurrentStep(button) {
 	return parseInt(button.closest('.step-form').id.split('-')[1]);
 }
@@ -184,7 +209,6 @@ function populateFormWithSavedData() {
 }
 
 function handleFormSubmits() {
-	showSuccessModal();
 	const forms = document.querySelectorAll('.step-form');
 
 	forms.forEach((form) => {
@@ -268,3 +292,18 @@ function showSuccessModal() {
 		}
 	});
 }
+
+function toggleSelectArrow(event) {
+	const select = event.target;
+	if (event.type === 'focus') {
+		select.classList.add('up-arrow');
+	} else if (event.type === 'blur') {
+		select.classList.remove('up-arrow');
+	}
+}
+
+const selectElements = document.querySelectorAll('select');
+selectElements.forEach((select) => {
+	select.addEventListener('focus', toggleSelectArrow);
+	select.addEventListener('blur', toggleSelectArrow);
+});

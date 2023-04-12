@@ -1,4 +1,21 @@
 header {
+	&.form {
+		@include respond-to(small) {
+			background: linear-gradient(
+				180deg,
+				#173daa 110.64%,
+				rgba(23, 61, 170, 0) 110.65%
+			);
+		}
+		@include respond-to(medium) {
+			background: linear-gradient(
+				180deg,
+				#173daa 110.64%,
+				rgba(23, 61, 170, 0) 110.65%
+			);
+		}
+	}
+
 	position: absolute;
 	top: 0;
 	left: 0;
